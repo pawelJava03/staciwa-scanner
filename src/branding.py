@@ -29,4 +29,4 @@ def show_welcome():
 
 
     console.print(Panel.fit(Text(logo, justify="center"), border_style="bright_cyan"))
-    console.print(build_colored_text("Staciwa: Narzędzie CLI do skanowania bezpieczeństwa stron"))
+    console.print(build_colored_text("Staciwa: CLI tool to scan websites"))

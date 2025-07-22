@@ -4,9 +4,11 @@ from rich.text import Text
 from rich.console import Console
 console = Console()
 from branding import build_colored_text as bct
+import scan
 
 def main():
     show_welcome()
+
 
 
     while True:
@@ -22,6 +24,12 @@ def main():
             url = command.split(" ")[1] if len(command.split()) > 1 else None
             if url:
                 print(f"Scanning {url}...")
+                status_code = scan.status_code(url)
+                print(f"Status code: {status_code}")
+                tech = scan.detect_cms(url)
+                print(f"Detected CMS: {tech}")
+                framework = scan.detect_framework(url)
+                print(f"Detected Framework: {framework}")
             else:
                 print("Please provide a URL to scan.")
         elif command == 'exit':
