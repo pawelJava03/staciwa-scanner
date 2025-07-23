@@ -9,8 +9,6 @@ import scan
 def main():
     show_welcome()
 
-
-
     while True:
         command = input("\n[staciwa] > ").strip().lower()
         if command == 'help':
@@ -25,11 +23,14 @@ def main():
             if url:
                 print(f"Scanning {url}...")
                 status_code = scan.status_code(url)
-                print(f"Status code: {status_code}")
+                console.print(f"Status code: {status_code}")
                 tech = scan.detect_cms(url)
                 print(f"Detected CMS: {tech}")
                 framework = scan.detect_framework(url)
                 print(f"Detected Framework: {framework}")
+                security = scan.detect_security(url)
+                console.print(security)
+
             else:
                 print("Please provide a URL to scan.")
         elif command == 'exit':
