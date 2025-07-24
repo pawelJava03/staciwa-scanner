@@ -1,0 +1,15 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/__init__.py
+src/branding.py
+src/cli.py
+src/lighthouseApi.py
+src/scan.py
+staciwa_scan.egg-info/PKG-INFO
+staciwa_scan.egg-info/SOURCES.txt
+staciwa_scan.egg-info/dependency_links.txt
+staciwa_scan.egg-info/entry_points.txt
+staciwa_scan.egg-info/requires.txt
+staciwa_scan.egg-info/top_level.txt

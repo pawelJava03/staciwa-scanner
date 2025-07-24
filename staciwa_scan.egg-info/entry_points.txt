@@ -1,0 +1,2 @@
+[console_scripts]
+staciwa-scan = staciwa_scan.cli:main

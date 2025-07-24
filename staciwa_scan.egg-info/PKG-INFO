@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: staciwa-scan
+Version: 0.1.0
+Summary: CLI scanner for websites (status, CORS, Lighthouse, etc.)
+Home-page: https://github.com/pawelJava03/staciwa-cli
+Author: Paweł Staciwa
+Author-email: kontakt@staciwa.dev
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: python-dotenv
+Requires-Dist: rich
+Dynamic: license-file
