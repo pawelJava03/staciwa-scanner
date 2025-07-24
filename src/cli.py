@@ -2,6 +2,7 @@ from branding import show_welcome
 from rich.style import Style
 from rich.text import Text
 from rich.console import Console
+from lighthouseApi import get_lighthouse_score
 console = Console()
 from branding import build_colored_text as bct
 import scan
@@ -30,6 +31,19 @@ def main():
                 print(f"Detected Framework: {framework}")
                 security = scan.detect_security(url)
                 console.print(security)
+                cors = scan.check_cors(url)
+                console.print(f"Detected CORS: {cors}")
+                files = scan.exposed_files(url)
+                console.print("[bold underline]🔍 Detected Files:")
+                for file in files:
+                    console.print(f"  {file}")
+                redirect = scan.check_https_redirect(url)
+                console.print(f"{redirect}")
+                lighthouse_score = get_lighthouse_score(url)
+
+
+
+
 
             else:
                 print("Please provide a URL to scan.")
